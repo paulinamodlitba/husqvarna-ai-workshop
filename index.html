@@ -318,11 +318,25 @@
         .prompt-category h3 {
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             color: var(--secondary);
             display: flex;
             align-items: center;
             gap: 8px;
+        }
+
+        .docs-hint {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            padding: 10px 14px;
+            background: #F0F4F8;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .docs-hint strong {
+            color: var(--secondary);
         }
 
         .prompt-list {
@@ -653,6 +667,7 @@
 
             <div class="prompt-category">
                 <h3>🔍 Competitive Analysis</h3>
+                <div class="docs-hint"><strong>Upload:</strong> market-update-feb-2026.md, Business_Context.txt</div>
                 <div class="prompt-list">
                     <div class="prompt" onclick="copyPrompt(this)">What are the main competitive threats we should be monitoring based on the market intelligence? Prioritize by urgency.</div>
                     <div class="prompt" onclick="copyPrompt(this)">Summarize Stihl's recent moves and what they mean for our professional segment strategy.</div>
@@ -663,6 +678,7 @@
 
             <div class="prompt-category">
                 <h3>💬 Difficult Conversations</h3>
+                <div class="docs-hint"><strong>Upload:</strong> Weekly reports (relevant person's report), conversation-prep-framework.md</div>
                 <div class="prompt-list">
                     <div class="prompt" onclick="copyPrompt(this)">Help me prepare for a conversation with Claire (Customer Support) about the UK team's retention issues. What questions should I ask?</div>
                     <div class="prompt" onclick="copyPrompt(this)">I need to tell Thomas that we lost the Munich tender. How do I frame this as a learning conversation rather than blame?</div>
@@ -673,6 +689,7 @@
 
             <div class="prompt-category">
                 <h3>📊 Data Analysis (Weekly Reports)</h3>
+                <div class="docs-hint"><strong>Upload:</strong> All 4 weekly reports from data/reports/week-06/</div>
                 <div class="prompt-list">
                     <div class="prompt" onclick="copyPrompt(this)">Summarize all four weekly reports. What are the top 3 issues I should focus on this week?</div>
                     <div class="prompt" onclick="copyPrompt(this)">What patterns do you see across the reports? Are there any systemic issues affecting multiple teams?</div>
@@ -684,6 +701,7 @@
 
             <div class="prompt-category">
                 <h3>🎨 Workshop Preparation</h3>
+                <div class="docs-hint"><strong>Upload:</strong> workshop-design-template.md + relevant content (market intelligence, weekly reports, or project reports)</div>
                 <div class="prompt-list">
                     <div class="prompt" onclick="copyPrompt(this)">Design a 2-hour workshop for my team on "Responding to Competitive Pressure" based on the market intelligence report.</div>
                     <div class="prompt" onclick="copyPrompt(this)">I need to run a retrospective on why we lost the Munich tender. Create an agenda that drives learning without blame.</div>
@@ -694,6 +712,7 @@
 
             <div class="prompt-category">
                 <h3>📋 Project Management</h3>
+                <div class="docs-hint"><strong>Upload:</strong> ceora-commercial-launch.md and/or battery-platform-migration.md from data/projects/</div>
                 <div class="prompt-list">
                     <div class="prompt" onclick="copyPrompt(this)">Analyze the CEORA launch project status. What are the biggest risks and what should the project manager focus on?</div>
                     <div class="prompt" onclick="copyPrompt(this)">The Battery Platform Migration is over budget. Help me prepare questions for the steering committee meeting.</div>
@@ -705,6 +724,7 @@
 
             <div class="prompt-category">
                 <h3>🚀 Advanced / Combined</h3>
+                <div class="docs-hint"><strong>Upload:</strong> All documents — Business_Context.txt, weekly reports, project reports, market intelligence</div>
                 <div class="prompt-list">
                     <div class="prompt" onclick="copyPrompt(this)">Based on everything you know about our situation, what would you advise me to focus on this quarter? Be direct.</div>
                     <div class="prompt" onclick="copyPrompt(this)">If you were my coach, what tough questions would you ask me about how I'm leading this team?</div>
