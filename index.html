@@ -468,7 +468,7 @@
     <main class="container">
         <!-- Use Cases Section -->
         <section class="section">
-            <h2 class="section-title"><span>🎯</span> Five Use Cases</h2>
+            <h2 class="section-title"><span>🎯</span> Eight Use Cases</h2>
             <div class="use-cases">
                 <div class="use-case">
                     <div class="use-case-icon">🔍</div>
@@ -478,7 +478,7 @@
                 <div class="use-case">
                     <div class="use-case-icon">💬</div>
                     <h3>Difficult Conversations</h3>
-                    <p>Prepare for performance discussions, deliver tough feedback, and navigate sensitive topics.</p>
+                    <p>Prepare for conflicts, deliver tough feedback, and navigate change conversations with your team.</p>
                 </div>
                 <div class="use-case">
                     <div class="use-case-icon">📊</div>
@@ -494,6 +494,21 @@
                     <div class="use-case-icon">📋</div>
                     <h3>Project Management</h3>
                     <p>Analyze project status, identify risks, prepare for steering committees, and navigate trade-offs.</p>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon">🎯</div>
+                    <h3>Strategy to Goals</h3>
+                    <p>Break down division strategy into quarterly team goals and cascade to individual objectives.</p>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon">📅</div>
+                    <h3>Team Meeting Planning</h3>
+                    <p>Structure agendas, prioritize topics, formulate decisions, and plan effective facilitation.</p>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-icon">🧪</div>
+                    <h3>Interactive Scenario</h3>
+                    <p>Practice goal-setting for a team of 8 — set quarterly goals, break them down, and use AI as coach.</p>
                 </div>
             </div>
         </section>
@@ -520,7 +535,10 @@
                     <li><strong>📊 Weekly Reports (4)</strong> — Product Development, Sales (German-speaking markets), Customer Support, Digital Marketing</li>
                     <li><strong>📋 Project Status Reports (2)</strong> — Commercial Robotic Mower Launch, Battery Platform Migration</li>
                     <li><strong>🔍 Market Intelligence</strong> — Competitor updates, regulatory changes, market trends</li>
-                    <li><strong>🛠️ Templates</strong> — Frameworks for conversations, workshops, competitor briefs, project status</li>
+                    <li><strong>🎯 Division Strategy 2026-2027</strong> — Strategic pillars, targets, and team context for goal-setting exercises</li>
+                    <li><strong>📅 Team Meeting Context</strong> — Upcoming meeting agenda, open items, team dynamics, and decisions needed</li>
+                    <li><strong>🧪 Interactive Scenario</strong> — Guided exercise: set Q1 goals for your 8-person team using AI as support</li>
+                    <li><strong>🛠️ Templates</strong> — Frameworks for conversations, workshops, competitor briefs, project status, meeting planning</li>
                     <li><strong>📝 CLAUDE.md</strong> — Instructions for the AI assistant (for Claude Code/Projects)</li>
                 </ul>
             </div>
@@ -679,11 +697,26 @@
             <div class="prompt-category">
                 <h3>💬 Difficult Conversations</h3>
                 <div class="docs-hint"><strong>Upload:</strong> Weekly reports (relevant person's report), conversation-prep-framework.md</div>
-                <div class="prompt-list">
+
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Conflicts</p>
+                <div class="prompt-list" style="margin-bottom: 20px;">
+                    <div class="prompt" onclick="copyPrompt(this)">Erik and Thomas have tension around product readiness vs. sales promises. I need to address this before it affects the CEORA launch. Help me prepare a conversation where I mediate without taking sides. Give me an approach and specific questions to ask each of them.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">Two of my team members disagree on prioritization — Erik wants to focus on quality and Thomas wants to push for speed. How do I facilitate a conversation that finds common ground? Role-play the mediator role with me.</div>
+                </div>
+
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Feedback</p>
+                <div class="prompt-list" style="margin-bottom: 20px;">
                     <div class="prompt" onclick="copyPrompt(this)">Help me prepare for a conversation with Claire (Customer Support) about the UK team's retention issues. Give me talking points, key questions to ask, and potential responses to anticipate. Present directly in the chat.</div>
-                    <div class="prompt" onclick="copyPrompt(this)">I need to tell Thomas that we lost the Munich tender. How do I frame this as a learning conversation rather than blame? Give me an opening statement and 3-4 follow-up questions. Let me know if you can't find his report.</div>
-                    <div class="prompt" onclick="copyPrompt(this)">Role-play a conversation where I address James's concern about being spread too thin. You be James, and push back realistically based on his weekly report. We'll go back and forth in the chat.</div>
-                    <div class="prompt" onclick="copyPrompt(this)">What's the best way to discuss workload concerns with Maria from Product Development without making her feel criticized? Give me a conversation script I can adapt, directly in the chat.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">I need to tell Thomas that we lost the Munich tender. How do I frame this as a learning conversation rather than blame? Give me an opening statement and 3-4 follow-up questions.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">What's the best way to discuss workload concerns with Maria from Product Development without making her feel criticized? She's hinted she might leave. Give me a conversation script I can adapt.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">Role-play a conversation where I give constructive feedback to Lena about dominating team discussions. You be Lena and push back realistically. Let's go back and forth in the chat.</div>
+                </div>
+
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Change</p>
+                <div class="prompt-list">
+                    <div class="prompt" onclick="copyPrompt(this)">Our division is accelerating the shift from combustion to battery products. Thomas is worried about losing traditional customers. Help me prepare a conversation that acknowledges his concerns while building commitment to the transformation.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">I need to communicate a significant organizational change to my team: we're restructuring how we work with dealers. Some roles will change. Help me plan the communication — what to say, in what order, and how to handle anxiety. Present directly in the chat.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">Role-play a conversation where I address change fatigue in my team. Several people have expressed feeling overwhelmed by the pace of transformation. You be a skeptical team member and push back. Let's go back and forth.</div>
                 </div>
             </div>
 
@@ -719,6 +752,45 @@
                     <div class="prompt" onclick="copyPrompt(this)">Compare the two project reports. What patterns do you see in how these projects are being managed? Let me know if you can't find them. Create a comparison table in the chat, then give me your overall assessment.</div>
                     <div class="prompt" onclick="copyPrompt(this)">Draft a stakeholder communication explaining the commercial mower launch delay and our mitigation plan. Format as a PDF using our brand visual guidelines and professional but human tone of voice.</div>
                     <div class="prompt" onclick="copyPrompt(this)">The Battery Platform Migration has scope pressure from Marketing for connectivity features. Role-play the conversation where I push back on adding features mid-project. You be the Marketing VP. Let's go back and forth in the chat.</div>
+                </div>
+            </div>
+
+            <div class="prompt-category">
+                <h3>🎯 Strategy to Goals</h3>
+                <div class="docs-hint"><strong>Upload:</strong> division-strategy-2026.md from data/strategy/, Business_Context.txt, weekly reports (for team context)</div>
+                <div class="prompt-list">
+                    <div class="prompt" onclick="copyPrompt(this)">Break down this division strategy into 3 concrete quarterly goals for my Northern Europe team for Q1 2026. The goals should be specific, measurable, and connected to the strategic pillars. Present directly in the chat.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">I have 8 direct reports with different roles and challenges. Help me cascade our Q1 team goals into individual goals for each person. Consider that Maria is overloaded and James is new (6 months). Present as a table in the chat.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">Review my Q1 goals and tell me honestly: am I being too ambitious? Too safe? What would you change if you were my coach? Be direct and challenge my thinking.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">Help me draft a short message to send my team before Monday's meeting where I'll present the Q1 goals. I want them to come prepared with their own input so it feels collaborative, not top-down.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">Lena (Key Account Manager) tends to resist stretch targets. How should I present the goals to create buy-in from the whole team? Give me an opening statement and tips for handling pushback. Present directly in the chat.</div>
+                </div>
+            </div>
+
+            <div class="prompt-category">
+                <h3>📅 Team Meeting Planning</h3>
+                <div class="docs-hint"><strong>Upload:</strong> team-meeting-context.md from data/meetings/, weekly reports, meeting-planning-guide.md from templates/</div>
+                <div class="prompt-list">
+                    <div class="prompt" onclick="copyPrompt(this)">I have a 1-hour team meeting on Monday with 8 people. Here are the topics I need to cover: CEORA launch decision, battery supplier issue, team workload concerns, Q1 goal check, and competitive update on Stihl. Help me structure an agenda with time allocations and flag which items need a decision.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">I have 5 topics competing for time in my team meeting and only 60 minutes. Help me prioritize — what must be discussed this week, and what can wait or be handled asynchronously? Use the meeting context file for details.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">We need to decide on the CEORA launch approach in Monday's meeting. Help me frame this as a clear decision with 2-3 options, trade-offs for each, and a recommendation. I want the team to discuss, not just be told.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">I need to discuss team workload concerns in our meeting without it turning into a complaint session. How should I structure this conversation to be productive? Give me specific questions to ask and a facilitation approach.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">After the meeting, help me organize these decisions and action items into a clear summary I can send to the team. Include: decisions made, action items with owners, open questions, and topics for next week. Present directly in the chat.</div>
+                </div>
+            </div>
+
+            <div class="prompt-category" id="scenario">
+                <h3>🧪 Interactive Scenario: From Strategy to Team Goals</h3>
+                <div class="docs-hint"><strong>Upload:</strong> interactive-scenario-q1-goals.md from data/scenarios/, division-strategy-2026.md from data/strategy/</div>
+                <div class="prompt-list" style="background: linear-gradient(135deg, #F8F0E8 0%, #F3F4F6 100%); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+                    <p style="font-weight: 600; color: var(--secondary); margin-bottom: 12px; font-size: 1.05rem;">The Scenario</p>
+                    <p style="color: var(--text-light); margin-bottom: 16px;">You are Head of Northern Europe Commercial Operations at Husqvarna, leading a team of 8 people. The division just released its 2026-2027 strategy. Your VP has asked you to: <strong>(1)</strong> set 3 team-level Q1 goals, <strong>(2)</strong> break them down to individual goals, and <strong>(3)</strong> present the goal cascade at next week's leadership meeting.</p>
+                </div>
+                <div class="prompt-list">
+                    <div class="prompt" onclick="copyPrompt(this)">I manage an 8-person team responsible for Northern Europe Commercial Operations at Husqvarna. Based on the division strategy document, help me define 3 meaningful quarterly goals for Q1 2026. The goals should connect to the strategic pillars while being realistic for one quarter. Consider the team challenges mentioned in the scenario file.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">Here are my 3 team goals for Q1: [paste your goals]. Help me break these down into individual goals for each of my 8 team members. Consider their roles, current challenges, and that Maria is already overloaded (on 3 projects) and James is new (6 months in the role).</div>
+                    <div class="prompt" onclick="copyPrompt(this)">I need to present these goals to my team on Monday. Help me structure a 30-minute goal-setting discussion that feels collaborative, not top-down. Include opening remarks, discussion questions, and how to handle pushback.</div>
+                    <div class="prompt" onclick="copyPrompt(this)">Role-play my VP reviewing these goals. Challenge me: Are they ambitious enough? Do they connect clearly to the strategy? What's missing? Push back like a tough but fair leader would. Let's go back and forth in the chat.</div>
                 </div>
             </div>
 
