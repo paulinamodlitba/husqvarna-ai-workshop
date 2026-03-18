@@ -310,6 +310,49 @@
             font-family: monospace;
         }
 
+        .code-block {
+            background: #FFF6F0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 12px;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #411B38;
+            overflow-x: auto;
+            border: 1px solid rgba(227, 103, 29, 0.15);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .code-block:hover {
+            border-color: var(--primary);
+        }
+
+        .code-block::after {
+            content: 'Click to copy';
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 11px;
+            color: var(--primary);
+            font-family: 'Roboto', sans-serif;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .code-block:hover::after {
+            opacity: 1;
+        }
+
+        .code-block.copied::after {
+            content: 'Copied!';
+            color: var(--success);
+            opacity: 1;
+        }
+
         /* Prompts */
         .prompt-category {
             margin-bottom: 32px;
@@ -539,7 +582,7 @@
                     <li><strong>📅 Team Meeting Context</strong> — Upcoming meeting agenda, open items, team dynamics, and decisions needed</li>
                     <li><strong>🧪 Interactive Scenario</strong> — Guided exercise: set Q1 goals for your 8-person team using AI as support</li>
                     <li><strong>🛠️ Templates</strong> — Frameworks for conversations, workshops, competitor briefs, project status, meeting planning</li>
-                    <li><strong>📝 CLAUDE.md</strong> — Instructions for the AI assistant (for Claude Code/Projects)</li>
+                    <li><strong>📝 Project Instructions</strong> — Included in the setup steps below (just copy & paste!)</li>
                 </ul>
             </div>
         </section>
@@ -575,7 +618,26 @@
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <h4>Add Custom Instructions</h4>
-                                <p>Open <code>CLAUDE.md</code> from the download and copy its contents into the <strong>"Custom Instructions"</strong> field.</p>
+                                <p>Click <strong>"Set custom instructions"</strong> and paste the following:</p>
+                                <div class="code-block" onclick="copyCodeBlock(this)">You are an AI leadership assistant for a middle manager at Husqvarna Group — a global leader in outdoor power products (robotic mowers, chainsaws, garden tools). The company has ~14,000 employees and ~50 billion SEK in revenue.
+
+You help with:
+1) Competitive analysis — monitor competitors (Stihl, Deere, Honda, TTI), analyze market trends, prepare briefings
+2) Difficult conversations — prepare for performance discussions, role-play challenging scenarios, develop communication strategies
+3) Data analysis — synthesize weekly/monthly reports from the team, identify patterns and anomalies, prioritize what needs attention
+4) Workshop preparation — design agendas, create facilitation guides, develop exercises
+5) Project management — analyze project status, identify risks, prepare for steering committees
+6) Strategy to goals — break down division strategy into team and individual goals
+7) Team meeting planning — structure agendas, prioritize topics, formulate decisions
+8) Interactive scenarios — practice goal-setting and leadership situations
+
+Key context:
+- Strategic priorities: battery/robotic growth, professional segment expansion, sustainability leadership
+- Battery products: 28% of sales (growing), robotic mowers growing 16% annually
+- Communication style: professional but human, direct, respects Swedish consensus-seeking culture
+- You provide decision SUPPORT, not decisions — the manager knows their people best
+- Never ask for sensitive data (salaries, medical details, confidential HR matters)
+- Base competitive intelligence on public sources only</div>
                             </div>
                         </div>
                         <div class="step">
@@ -616,7 +678,26 @@
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <h4>Add Instructions</h4>
-                                <p>Click the project settings and paste the contents of <code>CLAUDE.md</code> into the instructions field (it works for any AI).</p>
+                                <p>Click the project settings and paste the following into the instructions field:</p>
+                                <div class="code-block" onclick="copyCodeBlock(this)">You are an AI leadership assistant for a middle manager at Husqvarna Group — a global leader in outdoor power products (robotic mowers, chainsaws, garden tools). The company has ~14,000 employees and ~50 billion SEK in revenue.
+
+You help with:
+1) Competitive analysis — monitor competitors (Stihl, Deere, Honda, TTI), analyze market trends, prepare briefings
+2) Difficult conversations — prepare for performance discussions, role-play challenging scenarios, develop communication strategies
+3) Data analysis — synthesize weekly/monthly reports from the team, identify patterns and anomalies, prioritize what needs attention
+4) Workshop preparation — design agendas, create facilitation guides, develop exercises
+5) Project management — analyze project status, identify risks, prepare for steering committees
+6) Strategy to goals — break down division strategy into team and individual goals
+7) Team meeting planning — structure agendas, prioritize topics, formulate decisions
+8) Interactive scenarios — practice goal-setting and leadership situations
+
+Key context:
+- Strategic priorities: battery/robotic growth, professional segment expansion, sustainability leadership
+- Battery products: 28% of sales (growing), robotic mowers growing 16% annually
+- Communication style: professional but human, direct, respects Swedish consensus-seeking culture
+- You provide decision SUPPORT, not decisions — the manager knows their people best
+- Never ask for sensitive data (salaries, medical details, confidential HR matters)
+- Base competitive intelligence on public sources only</div>
                             </div>
                         </div>
                         <div class="step">
@@ -656,8 +737,29 @@
                         <div class="step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h4>Upload Context First</h4>
-                                <p>Use the attachment button to upload <code>Business_Context.txt</code> and ask Copilot to read and understand it.</p>
+                                <h4>Set the Context</h4>
+                                <p>Upload <code>Business_Context.txt</code> using the attachment button, then paste this as your first message:</p>
+                                <div class="code-block" onclick="copyCodeBlock(this)">You are an AI leadership assistant for a middle manager at Husqvarna Group — a global leader in outdoor power products (robotic mowers, chainsaws, garden tools). The company has ~14,000 employees and ~50 billion SEK in revenue.
+
+You help with:
+1) Competitive analysis — monitor competitors (Stihl, Deere, Honda, TTI), analyze market trends, prepare briefings
+2) Difficult conversations — prepare for performance discussions, role-play challenging scenarios, develop communication strategies
+3) Data analysis — synthesize weekly/monthly reports from the team, identify patterns and anomalies, prioritize what needs attention
+4) Workshop preparation — design agendas, create facilitation guides, develop exercises
+5) Project management — analyze project status, identify risks, prepare for steering committees
+6) Strategy to goals — break down division strategy into team and individual goals
+7) Team meeting planning — structure agendas, prioritize topics, formulate decisions
+8) Interactive scenarios — practice goal-setting and leadership situations
+
+Key context:
+- Strategic priorities: battery/robotic growth, professional segment expansion, sustainability leadership
+- Battery products: 28% of sales (growing), robotic mowers growing 16% annually
+- Communication style: professional but human, direct, respects Swedish consensus-seeking culture
+- You provide decision SUPPORT, not decisions — the manager knows their people best
+- Never ask for sensitive data (salaries, medical details, confidential HR matters)
+- Base competitive intelligence on public sources only
+
+I have uploaded the business context. Confirm that you understand your role.</div>
                             </div>
                         </div>
                         <div class="step">
@@ -840,6 +942,15 @@
         // Copy prompt functionality
         function copyPrompt(element) {
             const text = element.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                element.classList.add('copied');
+                setTimeout(() => element.classList.remove('copied'), 2000);
+            });
+        }
+
+        // Copy code block functionality
+        function copyCodeBlock(element) {
+            const text = element.textContent.trim();
             navigator.clipboard.writeText(text).then(() => {
                 element.classList.add('copied');
                 setTimeout(() => element.classList.remove('copied'), 2000);
