@@ -723,59 +723,42 @@ Key context:
                         <div class="step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>Open Microsoft Copilot</h4>
-                                <p>Go to <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a> or use Copilot in Edge/Microsoft 365.</p>
+                                <h4>Check Access</h4>
+                                <p>Copilot is included in some Microsoft 365 subscriptions. Check with your IT department if you have access. Go to <a href="https://copilot.microsoft.com" target="_blank">copilot.microsoft.com</a> or use Copilot directly in Word/Teams. <strong>Recommended:</strong> If available, select "Office Agent (frontier)" for best performance.</p>
                             </div>
                         </div>
                         <div class="step">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h4>Start a Conversation</h4>
-                                <p>Copilot doesn't have persistent projects, so you'll work within a single conversation.</p>
+                                <h4>Choose Workspace</h4>
+                                <p>Open Copilot in Microsoft 365 (via Teams, Word, or the web version). Start a new conversation.</p>
                             </div>
                         </div>
                         <div class="step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h4>Set the Context</h4>
-                                <p>Upload <code>Business_Context.txt</code> using the attachment button, then paste this as your first message:</p>
-                                <div class="code-block" onclick="copyCodeBlock(this)">You are an AI leadership assistant for a middle manager at Husqvarna Group — a global leader in outdoor power products (robotic mowers, chainsaws, garden tools). The company has ~14,000 employees and ~50 billion SEK in revenue.
-
-You help with:
-1) Competitive analysis — monitor competitors (Stihl, Deere, Honda, TTI), analyze market trends, prepare briefings
-2) Difficult conversations — prepare for performance discussions, role-play challenging scenarios, develop communication strategies
-3) Data analysis — synthesize weekly/monthly reports from the team, identify patterns and anomalies, prioritize what needs attention
-4) Workshop preparation — design agendas, create facilitation guides, develop exercises
-5) Project management — analyze project status, identify risks, prepare for steering committees
-6) Strategy to goals — break down division strategy into team and individual goals
-7) Team meeting planning — structure agendas, prioritize topics, formulate decisions
-8) Interactive scenarios — practice goal-setting and leadership situations
-
-Key context:
-- Strategic priorities: battery/robotic growth, professional segment expansion, sustainability leadership
-- Battery products: 28% of sales (growing), robotic mowers growing 16% annually
-- Communication style: professional but human, direct, respects Swedish consensus-seeking culture
-- You provide decision SUPPORT, not decisions — the manager knows their people best
-- Never ask for sensitive data (salaries, medical details, confidential HR matters)
-- Base competitive intelligence on public sources only
-
-I have uploaded the business context. Confirm that you understand your role.</div>
+                                <h4>Upload Files</h4>
+                                <p>In the Copilot chat, click the 📎 icon or drag and drop: <code>Business_Context.txt</code>, all weekly reports, and the market intelligence file. Note: some Copilot versions have file number limitations.</p>
                             </div>
                         </div>
                         <div class="step">
                             <div class="step-number">4</div>
                             <div class="step-content">
-                                <h4>Add Reports</h4>
-                                <p>Upload the weekly reports one at a time (or combined). Copilot will include them in the conversation context.</p>
+                                <h4>Give Instructions</h4>
+                                <p>Paste the following as your first message:</p>
+                                <div class="code-block" onclick="copyCodeBlock(this)">I have uploaded business context, weekly reports, and market intelligence for Husqvarna Group. You are my AI leadership assistant as a middle manager. When I ask questions, you should: 1) Read and analyze all relevant documents, 2) Identify patterns, problems, and successes across the team, 3) Prioritize what needs my attention, 4) Suggest concrete actions and follow-up questions, 5) Be professional but human, direct, and concise. Confirm that you understand the assignment.</div>
                             </div>
                         </div>
                         <div class="step">
                             <div class="step-number">5</div>
                             <div class="step-content">
-                                <h4>Work Incrementally</h4>
-                                <p>Since context doesn't persist, upload relevant files at the start of each session. Try the prompts below!</p>
+                                <h4>Ask Your First Question</h4>
+                                <p>Once Copilot confirms, try: <em>"What are the top 3 issues I should focus on this week based on the team reports?"</em></p>
                             </div>
                         </div>
+                    </div>
+                    <div style="background: #F0F4FF; border-radius: 12px; padding: 16px 20px; margin-top: 16px; font-size: 0.9rem; color: var(--text);">
+                        <strong>Copilot advantage:</strong> If you already use Microsoft 365, Copilot integrates with your existing tools (Teams, Outlook, Word, Excel). Data stays within your Microsoft ecosystem, which can simplify GDPR compliance.
                     </div>
                 </div>
             </div>
